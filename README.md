@@ -1,30 +1,38 @@
 # Resolving Copycat Problems in Visual Imitation Learning via Residual Action Prediction
 
+This is the code of the paper [Resolving Copycat Problems in Visual Imitation Learning via Residual Action Prediction](https://arxiv.org/abs/2207.09705). You can use this repo to reproduce the results of BCSO (behavioral cloning with single observation), BCOH (behavioral cloning with observation history) and our method.
+
 ## Environment
 
-#### Requirements
+### Requirements
 
 - Hardware: A computer with a dedicated GPU capable of running Unreal Engine.
 - OS: Ubuntu also compatible with CARLA (16.04)
 
-#### Installation
+### Installation
 
 To run the code, we provide a conda environment requirements file. Start by cloning the requirement on some folder and then, to install, just run:
 
 ```
 conda env create -f requirements.yaml
 ```
-#### Setting Environment/ Getting Data
+### Setting Environment/ Getting Data
 The first thing you need to do is define the datasets folder.
 This is the folder that will contain your training and validation datasets
 
     export COIL_DATASET_PATH=<Path to where your dataset folders are>
 
-To collect datasets please check the data collector repository https://github.com/carla-simulator/data-collector.
+Download a sample dataset pack, with one training and two validations, by running
 
-## Data Collection
+```
+python3 tools/get_sample_datasets.py
+```
 
-The data collection can refer to https://github.com/carla-simulator/data-collector
+The datasets (CoILTrain, CoILVal1 and CoILVal2) will be stored at the COIL_DATASET_PATH folder.
+
+The dataset used in our paper is CARLA100, which can be downloaded from the original [github repo](https://github.com/felipecode/coiltraine/blob/master/docs/exploring_limitations.md) of Felipe Codevilla. Download the .zip files and extract the dataset into $COIL_DATASET_PATH/CoilTrain100.
+
+To collect other datasets please check the data collector repository. https://github.com/carla-simulator/data-collector
 
 ## How to use our code?
 
@@ -33,5 +41,5 @@ The data collection can refer to https://github.com/carla-simulator/data-collect
 ```
   python3 main.py --folder action_residual_prediction --gpus 0 1 2 -de NocrashTrainingDense_Town01
 ```
-3. The training checkpoint would be saved in _logs
+3. The training checkpoints would be saved in _logs
 4. The driving results would be saved in _benchmarks_results

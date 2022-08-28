@@ -2,7 +2,16 @@
 
 ## Environment
 
-The environment setup can refer to https://github.com/felipecode/coiltraine
+#### Requirements
+
+- Hardware: A computer with a dedicated GPU capable of running Unreal Engine.
+- OS: Ubuntu also compatible with CARLA (16.04)
+
+#### Installation
+
+To run the code, we provide a conda environment requirements file. Start by cloning the requirement on some folder and then, to install, just run:
+
+ 
 
 ## Data Collection
 

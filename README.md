@@ -11,7 +11,11 @@
 
 To run the code, we provide a conda environment requirements file. Start by cloning the requirement on some folder and then, to install, just run:
 
- 
+```
+conda env create -f requirements.yaml
+```
+
+
 
 ## Data Collection
 

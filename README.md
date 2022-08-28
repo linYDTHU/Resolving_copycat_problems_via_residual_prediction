@@ -1,17 +1,17 @@
 # Resolving Copycat Problems in Visual Imitation Learning via Residual Action Prediction
 
-This is the code of the paper [Resolving Copycat Problems in Visual Imitation Learning via Residual Action Prediction](https://arxiv.org/abs/2207.09705). You can use this repo to reproduce the results of BCSO (behavioral cloning with single observation), BCOH (behavioral cloning with observation history) and our method.
+This is the code of the paper [Resolving Copycat Problems in Visual Imitation Learning via Residual Action Prediction](https://arxiv.org/abs/2207.09705). You can use this repo to reproduce the results of our method in CARLA.
 
 ## Environment
 
 ### Requirements
 
 - Hardware: A computer with a dedicated GPU capable of running Unreal Engine.
-- OS: Ubuntu also compatible with CARLA (16.04)
+- OS: Ubuntu also compatible with CARLA
 
 ### Installation
 
-To run the code, we provide a conda environment requirements file. Start by cloning the requirement on some folder and then, to install, just run:
+To run the code, we provide a conda environment requirements file. Start by cloning the requirement on the same folder and then, to install, just run:
 
 ```
 conda env create -f requirements.yaml
@@ -39,7 +39,15 @@ To collect other datasets please check the data collector repository. https://gi
 1. Create a folder containing the configurations of model in .yaml (can refer to configs/action_residual_prediction)
 2. Use main.py to train and evaluate
 ```
-  python3 main.py --folder action_residual_prediction --gpus 0 1 2 -de NocrashTrainingDense_Town01
+python3 main.py --folder action_residual_prediction --gpus 0 1 2 -de NocrashTrainingDense_Town01 --docker carlasim/carla:0.8.4
 ```
+
 3. The training checkpoints would be saved in _logs
-4. The driving results would be saved in _benchmarks_results
+
+4. The driving results would be saved in _benchmarks_results, and you can print results by using tools/print_metrics.py
+
+```
+python3 tools/print_metrics.py --path=<Path to where your results folders are> 
+```
+
+   

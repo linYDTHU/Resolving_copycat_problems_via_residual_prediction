@@ -44,7 +44,7 @@ python3 main.py --folder action_residual_prediction --gpus 0 1 2 -de NocrashTrai
 
 3. The training checkpoints would be saved in _logs
 
-4. The driving results would be saved in _benchmarks_results, and you can print results by using tools/print_metrics.py
+4. The driving results would be saved in _benchmarks_results, and you can print detailed results by using tools/print_metrics.py
 
 ```
 python3 tools/print_metrics.py --path=<Path to where your results folders are> 

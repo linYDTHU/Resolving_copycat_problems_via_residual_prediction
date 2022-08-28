@@ -14,8 +14,13 @@ To run the code, we provide a conda environment requirements file. Start by clon
 ```
 conda env create -f requirements.yaml
 ```
+#### Setting Environment/ Getting Data
+The first thing you need to do is define the datasets folder.
+This is the folder that will contain your training and validation datasets
 
+    export COIL_DATASET_PATH=<Path to where your dataset folders are>
 
+To collect datasets please check the data collector repository https://github.com/carla-simulator/data-collector.
 
 ## Data Collection
 

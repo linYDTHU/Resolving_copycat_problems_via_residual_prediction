@@ -55,22 +55,13 @@ python3 tools/print_metrics.py --path=<Path to where your results folders are>
 Please consider citing our paper in your publications if it helps. Here is the bibtex:
 
 ```
-@misc{https://doi.org/10.48550/arxiv.2207.09705,
-  doi = {10.48550/ARXIV.2207.09705},
-  
-  url = {https://arxiv.org/abs/2207.09705},
-  
-  author = {Chuang, Chia-Chi and Yang, Donglin and Wen, Chuan and Gao, Yang},
-  
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  
-  title = {Resolving Copycat Problems in Visual Imitation Learning via Residual Action Prediction},
-  
-  publisher = {arXiv},
-  
-  year = {2022},
-  
-  copyright = {arXiv.org perpetual, non-exclusive license}
+@inproceedings{chuang2022resolving,
+  title={Resolving Copycat Problems in Visual Imitation Learning via Residual Action Prediction},
+  author={Chuang, Chia-Chi and Yang, Donglin and Wen, Chuan and Gao, Yang},
+  booktitle={European Conference on Computer Vision},
+  pages={392--409},
+  year={2022},
+  organization={Springer}
 }
 ```
 
